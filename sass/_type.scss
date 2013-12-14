@@ -4,16 +4,18 @@
    - Headings
    ========================================================================== */
 
-/* Copy
-   ========================================================================== */
+/*====== Font Family ===========*/
+.serif  { font-family: Tiempos, Georgia, Times, serif; }
+.sansserif { font-family: helvetica, arial, sans-serif; }
 
-p {           font-size: $font-size-4; }
-.intro {      font-size: $font-size-3; }
-
-
-
-/* Headings
-   ========================================================================== */
+/*====== Font Sizes ===========*/
+.f-20 { font-size: 20px; }
+.f1    { font-size: 2rem; }
+.f2    { font-size: 1.5rem; }
+.f3    { font-size: 1.2rem; }
+.f4    { font-size: 1.2rem; }
+.f5    { font-size: 1rem; }
+.f6    { font-size: .85rem; }
 
 h1,.h1 {      font-size: $font-size-1; }
 h2,.h2 {      font-size: $font-size-2; }
@@ -23,5 +25,57 @@ h5,.h5 {      font-size: $font-size-5; }
 h6,.h6 {      font-size: $font-size-6; }
 
 .meta {       font-size: $font-size-6; }
-
+.intro {      font-size: $font-size-3; }
 blockquote {  font-size: $font-size-2; }
+
+/*====== Leading ===========*/
+.lh-1 { line-height: 1; }
+.lh-title { line-height: 1.3; }
+.lh-cp { line-height: 1.5; }
+.lh-2 { line-height: 2; }
+
+
+/*====== Text Color ===========*/
+.near-black { color: $near-black; }
+.white { color: $white; }
+.tawny { color: $tawny; }
+.gray-medium { color: $gray-medium; }
+
+
+/*====== Text Decoration ===========*/
+.italic { font-style:italic; }
+.bold { font-weight: bold; }
+.uppercase { text-transform: uppercase; }
+.kerning-s { letter-spacing: .2em; }
+.text-plain { text-decoration: none; }
+.ws-nowrap { white-space: nowrap; }
+
+
+@include break(not-small) {
+.f1-ns { font-size: 2rem; }
+.f2-ns { font-size: 1.5rem; }
+.f3-ns { font-size: 1.2rem; }
+.f4-ns { font-size: 1.2rem; }
+.f5-ns { font-size: 1rem; }
+.f6-ns { font-size: .85rem; }
+}
+
+@include break(medium) {
+.f1-m { font-size: 2rem; }
+.f2-m { font-size: 1.5rem; }
+.f3-m { font-size: 1.2rem; }
+.f4-m { font-size: 1.2rem; }
+.f5-m { font-size: 1rem; }
+.f6-m { font-size: .85rem; }
+}
+
+@include break(large) {
+.super-mega-l { font-size: 12rem; }
+.mega-l { font-size: 6rem; }
+.f1-l { font-size: 3rem; }
+.f2-l { font-size: 2rem; }
+.f3-l { font-size: 1.5rem; }
+.f4-l { font-size: 1.2rem; }
+.f5-l { font-size: 1rem; }
+.f6-l { font-size: 1rem; }
+}
