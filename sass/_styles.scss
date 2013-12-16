@@ -15,6 +15,9 @@ Height & Width
 Display & Layout
 ================================*/
 .center { margin-left: auto; margin-right: auto; }
+.rel { position: relative; }
+.dib { display: inline-block; }
+.of-h { overflow: hidden; }
 
 
 /*==============================
@@ -41,6 +44,19 @@ Misc.
 }
 
 
+.underline:after {
+	content: '';
+	position: absolute;
+	left: -100%;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: $tawny;
+	transition: all .3s;
+}
+.underline:hover:after {
+	left: 0;
+}
 
 /* ==========================================================================
 SPACING
@@ -417,10 +433,7 @@ SPACING
 
   .b-emph-ns:before, .b-emph-ns:after {
     content: '';
-    display: block;
-    margin: .5em auto;
-    width: 40%;
-    border-top: 3px solid $gray-light;
+    display: none;
   }
 
 }

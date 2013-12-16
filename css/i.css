@@ -552,6 +552,15 @@ Display & Layout
   margin-left: auto;
   margin-right: auto; }
 
+.rel {
+  position: relative; }
+
+.dib {
+  display: inline-block; }
+
+.of-h {
+  overflow: hidden; }
+
 /*==============================
 Background & Border
 ================================*/
@@ -579,6 +588,19 @@ Misc.
   margin: .5em auto;
   width: 70%;
   border-top: 3px solid #eeeeee; }
+
+.underline:after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #bc6e3e;
+  transition: all .3s; }
+
+.underline:hover:after {
+  left: 0; }
 
 /* ==========================================================================
 SPACING
@@ -1443,7 +1465,4 @@ SPACING
 
   .b-emph-ns:before, .b-emph-ns:after {
     content: '';
-    display: block;
-    margin: .5em auto;
-    width: 40%;
-    border-top: 3px solid #eeeeee; } }
+    display: none; } }
