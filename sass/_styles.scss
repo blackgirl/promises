@@ -3,6 +3,23 @@ Site styles
 ========================================================================== */
 
 /*==============================
+Text Decoration
+================================*/
+.ul-plain { list-style-type: none; }
+
+.a-uline:visited { border-bottom: 1px dotted $tawny; }
+.a-uline:active { border-bottom: 1px solid $tawny; }
+
+.b-emph:before, .b-emph:after {
+  content: '';
+  display: block;
+  margin: .5em auto;
+  width: 70%;
+  border-top: 3px solid $gray-light;
+}
+
+
+/*==============================
 Height & Width
 ================================*/
 .mw-full { max-width: 100%; }
@@ -29,34 +46,6 @@ Background & Border
 .b-black-dotted { border: 3px dotted $near-black; }
 .bb-gray-dotted { border-bottom: 1px dotted $gray-medium; }
 
-
-/*==============================
-Misc.
-================================*/
-.ul-plain { list-style-type: none; }
-
-.b-emph:before, .b-emph:after {
-  content: '';
-  display: block;
-  margin: .5em auto;
-  width: 70%;
-  border-top: 3px solid $gray-light;
-}
-
-
-.underline:after {
-	content: '';
-	position: absolute;
-	left: -100%;
-	bottom: 0;
-	width: 100%;
-	height: 1px;
-	background-color: $tawny;
-	transition: all .3s;
-}
-.underline:hover:after {
-	left: 0;
-}
 
 /* ==========================================================================
 SPACING
@@ -434,6 +423,34 @@ SPACING
   .b-emph-ns:before, .b-emph-ns:after {
     content: '';
     display: none;
+  }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $tawny;
+    transition: all .3s;
+  }
+  .underline-ns:hover:after {
+    left: 0;
+  }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $tawny;
+    transition: all .3s;
+  }
+  .underline-ns:hover:after {
+    left: 0;
   }
 
 }
