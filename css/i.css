@@ -458,6 +458,9 @@ blockquote {
 .uppercase {
   text-transform: uppercase; }
 
+.tac {
+  text-align: center; }
+
 .kerning-s {
   letter-spacing: .2em; }
 
@@ -531,6 +534,22 @@ blockquote {
 Site styles
 ========================================================================== */
 /*==============================
+Content & Element Decoration
+================================*/
+.ul-plain {
+  list-style-type: none; }
+
+.a-uline:visited {
+  border-bottom: 1px dotted #bc6e3e; }
+
+.b-emph:before, .b-emph:after {
+  content: '';
+  display: block;
+  margin: .5em auto;
+  width: 70%;
+  border-top: 3px solid #eeeeee; }
+
+/*==============================
 Height & Width
 ================================*/
 .mw-full {
@@ -570,37 +589,8 @@ Background & Border
 .bg-gray-dark {
   background-color: #333333; }
 
-.b-black-dotted {
-  border: 3px dotted #111111; }
-
-.bb-gray-dotted {
-  border-bottom: 1px dotted #999999; }
-
-/*==============================
-Misc.
-================================*/
-.ul-plain {
-  list-style-type: none; }
-
-.b-emph:before, .b-emph:after {
-  content: '';
-  display: block;
-  margin: .5em auto;
-  width: 70%;
-  border-top: 3px solid #eeeeee; }
-
-.underline:after {
-  content: '';
-  position: absolute;
-  left: -100%;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #bc6e3e;
-  transition: all .3s; }
-
-.underline:hover:after {
-  left: 0; }
+.bt-solid-gray {
+  border-top: 2px solid #eeeeee; }
 
 /* ==========================================================================
 SPACING
@@ -762,6 +752,9 @@ SPACING
 
 .mrx {
   margin-right: 4rem; }
+
+.mbnegative {
+  margin-bottom: -1rem; }
 
 .mbn {
   margin-bottom: 0; }
@@ -1457,6 +1450,9 @@ SPACING
   .mhx-l {
     margin: 0 4rem; } }
 @media screen and (min-width: 48em) {
+  .bt-gray-ns {
+    border-top: 2px solid #eeeeee; }
+
   .ws-norm-ns {
     white-space: normal; }
 
@@ -1465,4 +1461,30 @@ SPACING
 
   .b-emph-ns:before, .b-emph-ns:after {
     content: '';
-    display: none; } }
+    display: none; }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #bc6e3e;
+    transition: all .3s; }
+
+  .underline-ns:hover:after {
+    left: 0; }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #bc6e3e;
+    transition: all .3s; }
+
+  .underline-ns:hover:after {
+    left: 0; } }

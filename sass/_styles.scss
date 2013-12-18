@@ -3,6 +3,21 @@ Site styles
 ========================================================================== */
 
 /*==============================
+Content & Element Decoration
+================================*/
+.ul-plain { list-style-type: none; }
+.a-uline:visited { border-bottom: 1px dotted $tawny; }
+
+.b-emph:before, .b-emph:after {
+  content: '';
+  display: block;
+  margin: .5em auto;
+  width: 70%;
+  border-top: 3px solid $gray-light;
+}
+
+
+/*==============================
 Height & Width
 ================================*/
 .mw-full { max-width: 100%; }
@@ -25,38 +40,8 @@ Background & Border
 ================================*/
 .bg-near-white { background-color: $near-white; }
 .bg-gray-dark { background-color: $gray-dark; }
+.bt-solid-gray { border-top: 2px solid $gray-light; }
 
-.b-black-dotted { border: 3px dotted $near-black; }
-.bb-gray-dotted { border-bottom: 1px dotted $gray-medium; }
-
-
-/*==============================
-Misc.
-================================*/
-.ul-plain { list-style-type: none; }
-
-.b-emph:before, .b-emph:after {
-  content: '';
-  display: block;
-  margin: .5em auto;
-  width: 70%;
-  border-top: 3px solid $gray-light;
-}
-
-
-.underline:after {
-	content: '';
-	position: absolute;
-	left: -100%;
-	bottom: 0;
-	width: 100%;
-	height: 1px;
-	background-color: $tawny;
-	transition: all .3s;
-}
-.underline:hover:after {
-	left: 0;
-}
 
 /* ==========================================================================
 SPACING
@@ -134,6 +119,7 @@ SPACING
 .mrl { margin-right: 2rem; }
 .mrx { margin-right: 4rem; }
 
+.mbnegative { margin-bottom: -1rem; }
 .mbn { margin-bottom: 0; }
 .mbs { margin-bottom: .5rem; }
 .mbm { margin-bottom: 1rem; }
@@ -428,12 +414,41 @@ SPACING
 }
 
 @include break(not-small) {
+  .bt-gray-ns{ border-top: 2px solid $gray-light; }
   .ws-norm-ns { white-space: normal; }
   .of-hid-ns { overflow: hidden;}
 
   .b-emph-ns:before, .b-emph-ns:after {
     content: '';
     display: none;
+  }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $tawny;
+    transition: all .3s;
+  }
+  .underline-ns:hover:after {
+    left: 0;
+  }
+
+  .underline-ns:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $tawny;
+    transition: all .3s;
+  }
+  .underline-ns:hover:after {
+    left: 0;
   }
 
 }
