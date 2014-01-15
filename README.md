@@ -1,6 +1,6 @@
 # Promises to Users
 
-View the project page at [http://donnieberg.github.io/qstns](http://donnieberg.github.io/qstns "Promises to Users - Absolute Truths in Web Design.")
+View the project page at [http://donnieberg.github.io/promises/](http://donnieberg.github.io/promises/ "Promises to Users - Absolute Truths in Web Design.")
 
 QSTNS is our promise to to try to make the internet better a better place.
 Our core tenet is that the internet should be consumable by everyone with
