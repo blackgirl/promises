@@ -1,0 +1,1071 @@
+diff --git a/css/i.css b/css/i.css
+index 51abcd0..5d4a425 100644
+--- a/css/i.css
++++ b/css/i.css
+@@ -362,162 +362,245 @@ table {
+ /* Large - only targets 2nd breakpoint. Styles do not extend past 64em.
+    ========================================================================== */
+ /* ==========================================================================
+-   Site styles
+-
++   TYPE
++   - Copy
++   - Headings
+    ========================================================================== */
+-/* Typography */
+-p {
+-  font-size: 20px; }
+-
++/*====== Font Family ===========*/
+ .serif {
+-  font-family: baskerville; }
++  font-family: Tiempos, Georgia, Times, serif; }
+ 
+ .sansserif {
+   font-family: helvetica, arial, sans-serif; }
+ 
++/*====== Font Sizes ===========*/
++.f-20 {
++  font-size: 20px; }
++
++.f1 {
++  font-size: 2rem; }
++
++.f2 {
++  font-size: 1.5rem; }
++
++.f3 {
++  font-size: 1.2rem; }
++
++.f4 {
++  font-size: 1.2rem; }
++
++.f5 {
++  font-size: 1rem; }
++
++.f6 {
++  font-size: .85rem; }
++
++h1, .h1 {
++  font-size: 64px; }
++
++h2, .h2 {
++  font-size: 48px; }
++
++h3, .h3 {
++  font-size: 32px; }
++
++h4, .h4 {
++  font-size: 24px; }
++
++h5, .h5 {
++  font-size: 16px; }
++
++h6, .h6 {
++  font-size: 12px; }
++
++.meta {
++  font-size: 12px; }
++
++.intro {
++  font-size: 32px; }
++
++blockquote {
++  font-size: 48px; }
++
++/*====== Leading ===========*/
++.lh-1 {
++  line-height: 1; }
++
++.lh-title {
++  line-height: 1.3; }
++
++.lh-cp {
++  line-height: 1.5; }
++
++.lh-2 {
++  line-height: 2; }
++
++/*====== Text Color ===========*/
++.near-black {
++  color: #111111; }
++
++.white {
++  color: white; }
++
+ .tawny {
+   color: #bc6e3e; }
+ 
+ .gray-medium {
+   color: #999999; }
+ 
+-/* Text Decoration */
+-.uppercase {
+-  text-transform: uppercase; }
+-
++/*====== Text Decoration ===========*/
+ .italic {
+   font-style: italic; }
+ 
+ .bold {
+   font-weight: bold; }
+ 
++.uppercase {
++  text-transform: uppercase; }
++
++.tac {
++  text-align: center; }
++
+ .kerning-s {
+   letter-spacing: .2em; }
+ 
+-.list-style-none {
+-  list-style-type: none; }
+-
+-.text-decoration-none {
++.text-plain {
+   text-decoration: none; }
+ 
+-/* Display & Alignment */
+-.tc {
+-  text-align: center; }
++.ws-nowrap {
++  white-space: nowrap; }
+ 
+-.tl {
+-  text-align: left; }
++@media screen and (min-width: 48em) {
++  .f1-ns {
++    font-size: 2rem; }
+ 
+-.va-m {
+-  vertical-align: middle; }
++  .f2-ns {
++    font-size: 1.5rem; }
+ 
+-.db {
+-  display: block; }
++  .f3-ns {
++    font-size: 1.2rem; }
+ 
+-.dib {
+-  display: inline-block; }
++  .f4-ns {
++    font-size: 1.2rem; }
+ 
+-/* Max-width */
+-.mw-full {
+-  max-width: 100%; }
++  .f5-ns {
++    font-size: 1rem; }
+ 
+-.mw-800 {
+-  max-width: 800px; }
++  .f6-ns {
++    font-size: .85rem; } }
++@media screen and (min-width: 48em) and (max-width: 64em) {
++  .f1-m {
++    font-size: 2rem; }
+ 
+-.mw-400 {
+-  max-width: 400px; }
++  .f2-m {
++    font-size: 1.5rem; }
+ 
+-/* Borders */
+-.bt-gray-solid {
+-  border-top: 1px solid #eeeeee; }
++  .f3-m {
++    font-size: 1.2rem; }
+ 
+-.b-black-dotted {
+-  border: 3px dotted #111111; }
++  .f4-m {
++    font-size: 1.2rem; }
+ 
+-.bb-gray-dotted {
+-  border-bottom: 1px dotted #999999; }
++  .f5-m {
++    font-size: 1rem; }
+ 
+-/* Line-heights */
+-.cp {
+-  line-height: 1.5; }
++  .f6-m {
++    font-size: .85rem; } }
++@media screen and (min-width: 64em) {
++  .super-mega-l {
++    font-size: 12rem; }
+ 
+-.lh {
+-  line-height: 1; }
++  .mega-l {
++    font-size: 6rem; }
+ 
+-.lh-2 {
+-  line-height: 2; }
++  .f1-l {
++    font-size: 3rem; }
+ 
+-.lh-title {
+-  line-height: 1.3; }
++  .f2-l {
++    font-size: 2rem; }
+ 
+-/* Good/Bad Example Classes */
+-.default-tap-target {
+-  width: 44pt;
+-  height: 44pt; }
++  .f3-l {
++    font-size: 1.5rem; }
+ 
+-.bad-tap-target {
+-  width: 30pt;
+-  height: 30pt; }
++  .f4-l {
++    font-size: 1.2rem; }
+ 
+-.wrap {
+-  white-space: nowrap; }
++  .f5-l {
++    font-size: 1rem; }
+ 
+-@media screen and (min-width: 64em) {
+-  .wrap-l {
+-    white-space: normal; }
++  .f6-l {
++    font-size: 1rem; } }
++/* ==========================================================================
++Site styles
++========================================================================== */
++/*==============================
++Content & Element Decoration
++================================*/
++.ul-plain {
++  list-style-type: none; }
+ 
+-  .overflow-l {
+-    overflow: hidden; } }
+-@media screen and (min-width: 48em) and (max-width: 64em) {
+-  .wrap-l {
+-    white-space: normal; }
++.a-uline:visited {
++  border-bottom: 1px dotted #bc6e3e; }
+ 
+-  .overflow-l {
+-    overflow: hidden; } }
+-.f1 {
+-  font-size: 48px; }
++.b-emph:before, .b-emph:after {
++  content: '';
++  display: block;
++  margin: .5em auto;
++  width: 70%;
++  border-top: 3px solid #eeeeee; }
+ 
+-.f2 {
+-  font-size: 36px; }
++/*==============================
++Height & Width
++================================*/
++.mw-full {
++  max-width: 100%; }
+ 
+-.f3 {
+-  font-size: 24px; }
++.mw-half {
++  max-width: 50%; }
+ 
+-.f4 {
+-  font-size: 20px; }
++.mw-800 {
++  max-width: 800px; }
+ 
+-.f5 {
+-  font-size: 18px; }
++.mw-400 {
++  max-width: 400px; }
+ 
+-.f6 {
+-  font-size: 12px; }
++/*==============================
++Display & Layout
++================================*/
++.center {
++  margin-left: auto;
++  margin-right: auto; }
+ 
+-@media screen and (min-width: 48em) and (max-width: 64em) {
+-  .f3-l {
+-    font-size: 30px; } }
+-@media screen and (min-width: 64em) {
+-  .f1-l {
+-    font-size: 64px; }
++.rel {
++  position: relative; }
+ 
+-  .f2-l {
+-    font-size: 48px; }
++.dib {
++  display: inline-block; }
+ 
+-  .f3-l {
+-    font-size: 36px; }
++.of-h {
++  overflow: hidden; }
+ 
+-  .f4-l {
+-    font-size: 24px; }
++/*==============================
++Background & Border
++================================*/
++.bg-near-white {
++  background-color: #fffcf5; }
++
++.bg-gray-dark {
++  background-color: #333333; }
++
++.bt-solid-gray {
++  border-top: 2px solid #eeeeee; }
+ 
+-  .f5-l {
+-    font-size: 12px; } }
+ /* ==========================================================================
+-   SPACING
++SPACING
+ 
+-   - Mobile & Global
+-   - Not Small (All larger than first breakpoint.)
+-   - Medium
+-   - Large
++- Mobile & Global
++- Not Small (All larger than first breakpoint.)
++- Medium
++- Large
+ 
+-   ========================================================================== */
++========================================================================== */
+ /* Padding */
+ .pn {
+   padding: 0; }
+@@ -670,6 +753,9 @@ p {
+ .mrx {
+   margin-right: 4rem; }
+ 
++.mbnegative {
++  margin-bottom: -1rem; }
++
+ .mbn {
+   margin-bottom: 0; }
+ 
+@@ -679,9 +765,6 @@ p {
+ .mbm {
+   margin-bottom: 1rem; }
+ 
+-.mb--1-5 {
+-  margin-bottom: 1.5rem; }
+-
+ .mbl {
+   margin-bottom: 2rem; }
+ 
+@@ -1366,3 +1449,42 @@ p {
+ 
+   .mhx-l {
+     margin: 0 4rem; } }
++@media screen and (min-width: 48em) {
++  .bt-gray-ns {
++    border-top: 2px solid #eeeeee; }
++
++  .ws-norm-ns {
++    white-space: normal; }
++
++  .of-hid-ns {
++    overflow: hidden; }
++
++  .b-emph-ns:before, .b-emph-ns:after {
++    content: '';
++    display: none; }
++
++  .underline-ns:after {
++    content: '';
++    position: absolute;
++    left: -100%;
++    bottom: 0;
++    width: 100%;
++    height: 1px;
++    background-color: #bc6e3e;
++    transition: all .3s; }
++
++  .underline-ns:hover:after {
++    left: 0; }
++
++  .underline-ns:after {
++    content: '';
++    position: absolute;
++    left: -100%;
++    bottom: 0;
++    width: 100%;
++    height: 1px;
++    background-color: #bc6e3e;
++    transition: all .3s; }
++
++  .underline-ns:hover:after {
++    left: 0; } }
+diff --git a/index.html b/index.html
+index b1655c9..04e21e5 100644
+--- a/index.html
++++ b/index.html
+@@ -10,188 +10,214 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="css/i.css">
+   </head>
+-  <body class="pm pl-m pl-l serif">
+-    <header class="mw-800 mbx">
+-      <h1 class="f2 f2-l sansserif uppercase kerning-s">Promises to Users</h1>
+-      <p class="f4-l cp">
+-        People use the internet to consume information, and more often than not, that just means reading words on a screen. Too many websites make this harder than it should be. Let's fix that. If we deliver on the following promises to users, the internet will be a much better place.
++  <body class="f-20 near-black pm pl-m pl-l">
++    <header class="mw-800 mbx center">
++      <h1 class="sansserif f1 f1-m f1-l uppercase bold kerning-s">Promises to Users</h1>
++      <p class="serif lh-cp">
++        People use the internet to consume information, and more often than not that
++        just means reading words on a screen. Too many websites make this harder than it
++        should be. Let's fix that. If we deliver on the following promises to users, the
++        internet will be a much better place.
+       </p>
+     </header>
+ 
+-    <main>
+-      <article class="mw-800 mbx">
++    <main class="mbx">
++      <article class="mw-800 mbx center">
+         <header>
+-          <dt class="f3 f3-l uppercase bold sansserif kerning-s">Font-Size</dt>
+-          <dd class="cp f3 f4-l mln mts">Font-size is the size of the font measured in px, rem, or em. We promise users text will be large enough to read easily.</dd>
+-          <p class="cp f2 f3-l italic mts">Your main copy should be a minimum of 16px.</p>
++          <dt class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Font-Size</dt>
++          <dd class="serif f4 f3-l lh-cp mln mts">
++          Font-size is the size of the font measured in px, rem, or em. We promise users
++          text will be large enough to read easily.
++          </dd>
++          <p class="serif f2 f2-l lh-cp italic b-emph b-emph-ns">
++            Your main copy should be a minimum of 16px.
++          </p>
+         </header>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Good</h1>
+-          <p class="cp mb--1-5">This font is set to 20px, and you can easily read it. If it's larger, there aren't any downsides: everyone will be able to consume your content.</p>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Bad</h1>
+-          <p class="cp f5 mb--1-5">This font is set to 14px. The main goal of your website is to get people to consume your content or perform some action, and it'll be really difficult for them to do so if they can't read your text.</p>
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Good</h1>
++          <p class="serif lh-cp mbm">
++            This font is set to 20px, and you can easily read it. If it's larger, there aren't
++            any downsides: everyone will be able to consume your content.
++          </p>
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Bad</h1>
++          <p class="serif f6 lh-cp mbm">
++            This font is set to 14px. The main goal of your website is to get people to
++            consume your content or perform some action, and it'll be difficult for
++            them to do so if they can't read your text.
++          </p>
+         </section>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">Additional Reading</h1>
+-          <ul class="list-style-none pln">
+-            <li><a href="http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/" title="16 Pixels: For Body Copy. Anything Less Is A Costly Mistake | Smashing Magazine" class="text-decoration-none bb-gray-dotted tawny f4" target="_blank">Smashing Magazine</a></li>
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">Additional Reading</h1>
++          <ul class="ul-plain pln">
++            <li><a href="http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/" title="smashing magazine font-size article" class="serif tawny text-plain a-uline underline-ns dib of-h rel pbs">Smashing Magazine</a></li>
+           </ul>
+         </section>
+       </article>
+ 
+       <article class="mbx">
+-        <header class="mw-800">
++        <header class="mw-800 center">
+           <dl>
+-            <dt class="f3 f3-l uppercase bold sansserif kerning-s">Measure</dt>
+-            <dd class="cp f3 f4-l mln mts">Measure is the length of a line of text. We promise users to not strain their eyes by making them read across the entire page.</dd>
++            <dt class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Measure</dt>
++            <dd class="serif f4 f3-l lh-cp mln mts">
++            Measure is the length of a line of text. We promise users to not strain their
++            eyes by making them read across the entire page.
++            </dd>
+           </dl>
+-          <p class="cp f2 f3-l italic mts">
+-            For a single-column design measure should lie between 40 &amp; 80 characters. Many typographers consider the perfect measure to be 65 characters.
++          <p class="serif f2 f2-l lh-cp italic b-emph b-emph-ns">
++            For a single-column design measure should lie between 40 &amp; 80 characters.
++            Many typographers consider the perfect measure to be 65 characters.
+           </p>
+         </header>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Good</h1>
+-          <p class="cp mw-800 mb--1-5">
+-            This paragraph is set to a max-width of 800px which is roughly 75 characters per line (except when viewed on screens smaller than 800px wide). At the beginning of every new line the reader is focused, but this focus gradually wears off over the duration of the line which is why good measure increases readability.
++          <h1 class="sansserif f4 f4-l uppercase kerning-s mw-800 center">This is Good</h1>
++          <p class="serif lh-cp mbm mw-800 center">
++            This paragraph is set to a max-width of 800px which is roughly 75 characters per
++            line (except when viewed on screens smaller than 800px wide). At the beginning
++            of every new line the reader is focused, but this focus gradually wears off over
++            the duration of the line which is why good measure increases readability.
+           </p>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Bad</h1>
+-          <p class="cp wrap wrap-l mb--1-5">
+-Measure can create unity and harmony within a design, but a long measure disrupts the rhythm. If a line of text is too long the user’s eye will have a hard time focusing on the text. This is because the length makes it difficult to get an idea of where the line starts and ends. Furthermore it can be difficult to continue from the correct line in large blocks of text.
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Bad</h1>
++          <p class="serif lh-cp ws-nowrap ws-norm-ns mbm">
++            Measure can create unity and harmony within a design, but a long measure disrupts
++            the rhythm. If a line of text is too long the user’s eye will have a hard time
++            focusing on the text. This is because the length makes it difficult to get an
++            idea of where the line starts and ends. Furthermore it can be difficult to continue
++            from the correct line in large blocks of text.
+           </p>
+         </section>
+-        <section class="mw-800">
+-          <h1 class="f4 sansserif uppercase kerning-s">Additional Reading</h1>
+-          <ul class="list-style-none pln">
++        <section class="mw-800 center">
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">Additional Reading</h1>
++          <ul class="ul-plain pln">
+             <li>
+-              <a href="http://en.wikipedia.org/wiki/Measure_(typography)" title="Measure (typography) - Wikipedia, the free encyclopedia" class="text-decoration-none bb-gray-dotted tawny f4" target="_blank">Measure Wikipedia</a>
++              <a href="http://en.wikipedia.org/wiki/Measure_(typography)" title="Measure (typography) - Wikipedia, the free encyclopedia" class="serif tawny text-plain a-uline underline-ns dib of-h rel pbs">Measure Wikipedia</a>
+             </li>
+           </ul>
+         </section>
+       </article>
+ 
+-      <article class="mw-800 mbx">
+-        <header class="mw-800">
++      <article class="mw-800 mbx center">
++        <header class="mw-800 center">
+           <dl>
+-            <dt class="f3 f3-l uppercase bold sansserif kerning-s">Leading</dt>
+-            <dd class="cp f3 f4-l mln mts">Leading is the distance in between lines of text. We promise users the distance will be set appropriately so large blocks of text will be easy to read.</dd>
++            <dt class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Leading</dt>
++            <dd class="serif f4 f3-l lh-cp mln mts">
++            Leading is the distance in between baselines of text. We promise users the distance
++            will be set appropriately so large blocks of text will be easy to read.
++            </dd>
+           </dl>
+-          <p class="cp f2 f3-l italic mts">Titles should be set at a line-height of 1.3. Copy should be set to a line-height of 1.5-1.65.</p>
++          <p class="serif f2 f2-l lh-cp italic b-emph b-emph-ns">
++            Titles should be set at a line-height of 1.3. Copy should be set to a line-height of 1.5-1.65.
++          </p>
+         </header>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Good</h1>
+-          <h2 class="lh-title">Here's a Multi-Line Title that has just Enough Breathing Room in Between the Lines</h2>
+-          <p class="cp mb--1-5">
+-            Ethnic selfies Tonx, McSweeney's iPhone kitsch nisi butcher Helvetica 90's Neutra fixie. Thundercats roof party locavore, Blue Bottle nihil selfies deserunt banh mi laboris paleo fugiat tempor synth. Slow-carb plaid salvia cornhole. Deserunt reprehenderit fixie Neutra, 90's gluten-free tofu Schlitz consequat occupy nostrud cupidatat kogi gentrify.
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Good</h1>
++          <h2 class="sansserif f2 f2-l lh-title">
++            Here's a Multi-Line Title that has just Enough Breathing Room in Between the Lines
++          </h2>
++          <p class="serif lh-cp mbm">
++            This paragraph has a line-height of 1.5 which equals 30px (1.5 times its own font-size of 20px).
++            The lines have enough breathing space for the user to feel relaxed but not too much where the
++            lines feel disconnected.
+           </p>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Bad</h1>
+-          <h2 class="lh-2">Here's a Multi-Line Title that is More Difficult to Read because it has Too Much Space in Between the Lines</h2>
+-          <p class="lh mb--1-5">
+-            Ethnic selfies Tonx, McSweeney's iPhone kitsch nisi butcher Helvetica 90's Neutra fixie. Thundercats roof party locavore, Blue Bottle nihil selfies deserunt banh mi laboris paleo fugiat tempor synth. Slow-carb plaid salvia cornhole. Deserunt reprehenderit fixie Neutra, 90's gluten-free tofu Schlitz consequat occupy nostrud cupidatat kogi gentrify.
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Bad</h1>
++          <h2 class="sansserif f2 f2-l lh-2">
++            Here's a Multi-Line Title that is More Difficult to Read because it has Too Much
++            Space in Between the Lines
++          </h2>
++          <p class="serif lh-1 mbm">
++            This paragraph has a line-height of 1 which isn't much smaller than the default line-height of most browsers. Descenders and
++            ascenders collide—like the bottom of 'g' and top of 'l'—and the block of text feels cramped which makes readability
++            more difficult.
+           </p>
+         </section>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">Additional Reading</h1>
+-          <ul class="list-style-none pln">
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">Additional Reading</h1>
++          <ul class="ul-plain pln">
+             <li>
+-              <a href="http://en.wikipedia.org/wiki/Leading" title="Leading - Wikipedia, the free encyclopedia" class="text-decoration-none bb-gray-dotted tawny f4" target="_blank">Leading Wikipedia</a>
++              <a href="http://en.wikipedia.org/wiki/Leading" title="Leading - Wikipedia, the free encyclopedia" class="serif tawny text-plain a-uline underline-ns dib of-h rel pbs">Leading Wikipedia</a>
+             </li>
+           </ul>
+         </section>
+       </article>
+ 
+-      <article class="mw-800 mbx">
++      <article class="mw-800 mbx center">
+         <header>
+-          <dt class="f3 f3-l uppercase bold sansserif kerning-s">Text Contrast</dt>
+-          <dd class="cp f3 f4-l mln mts">Text contrast is the ratio of the luminance of the text color to that of its background. We promise users the ratio will be high enough to see text regardless of vision impairments.</dd>
+-          <p class="cp f2 f3-l italic mts">The minimum contrast between main copy and its background should have a ratio of 4.5:1.</p>
++          <dt class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Text Contrast</dt>
++          <dd class="serif f4 f3-l lh-cp mln mts">
++          Text contrast is the ratio of the luminance of the text color to that of its
++          background. We promise users the ratio will be high enough to see text regardless
++          of vision impairments.
++          </dd>
++          <p class="serif f2 f2-l lh-cp italic b-emph b-emph-ns">
++            The minimum contrast between main copy and its background should have a ratio of 4.5:1.
++          </p>
+         </header>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Good</h1>
+-          <p class="cp mb--1-5">
+-            This text is #000 on a white background which has the maximum text contrast ratio of 21:1. Contrast is measured in a formula that gives a ratio ranging from 1:1 (no contrast) to 21:1 (maximum contrast).
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Good</h1>
++          <p class="serif lh-cp mbm">
++            This text is #000 on a white background which has the maximum text contrast ratio
++            of 21:1. Contrast is measured in a formula that gives a ratio ranging from no contrast, 1:1
++            to maximum contrast, 21:1.
+           </p>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Bad</h1>
+-          <p class="cp gray-medium mb--1-5">
+-            This text is #999999 on a white background which has a text contrast ratio of 2.8:1. You may be able to read this but people with color blindness or vision impairments, as well as people browsing under less than ideal circumstances (bad monitor, window reflections) might find it more difficult.
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Bad</h1>
++          <p class="serif gray-medium lh-cp mbm">
++            This text is #999999 on a white background which has a text contrast ratio of
++            2.8:1. You may be able to read this but people with color blindness or vision
++            impairments, as well as people browsing under less than ideal circumstances
++            such as bad monitors or window reflections might find it more difficult.
+           </p>
+         </section>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">Additional Reading</h1>
+-          <ul class="list-style-none pln">
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">Additional Reading</h1>
++          <ul class="ul-plain pln">
+             <li>
+-              <a href="http://www.msfw.com/accessibility/tools/contrastratiocalculator.aspx" title="MSF&amp;W Accessibility Tools: Contrast Ratio Calculator" class="text-decoration-none bb-gray-dotted tawny f4" target="_blank">Contrast Ratio Calculator</a>
++              <a href="http://www.msfw.com/accessibility/tools/contrastratiocalculator.aspx" title="MSF&amp;W Accessibility Tools: Contrast Ratio Calculator" class="serif tawny text-plain a-uline underline-ns dib of-h rel pbs">Contrast Ratio Calculator</a>
+             </li>
+           </ul>
+         </section>
+       </article>
+ 
+-      <article class="mw-800 mbx">
++
++      <article class="mw-800 mbx center">
+         <header>
+-          <dt class="f3 f3-l uppercase bold sansserif kerning-s">Responsive Images</dt>
+-          <dd class="cp f3 f4-l mln mts">Responsive Images fit to the width of any viewport. We promise users images will never bleed off the screen regardless of screen width.</dd>
+-          <p class="cp f2 f3-l italic mts">Images should be set to max-width:100%.</p>
++          <dt class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Responsive Images</dt>
++          <dd class="serif f4 f3-l lh-cp mln mts">
++          Responsive Images fit to the width of any viewport. We promise users images will
++          never bleed off the screen regardless of screen width.
++          </dd>
++          <p class="serif f2 f2-l lh-cp italic b-emph b-emph-ns">
++            Images should be set to max-width:100%.
++          </p>
+         </header>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Good</h1>
+-          <div class="mw-400 mb--1-5">
+-            <p class="cp">Screen Width: 400px</p>
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Good</h1>
++          <div class="mw-400 mbm">
++            <p class="serif lh-cp">Screen Width: 400px</p>
+             <img src="http://1funny.com/wp-content/uploads/2012/07/cute-panda-cub.jpg" alt="cute panda" class="mw-full">
+           </div>
+-          <h1 class="f4 sansserif uppercase kerning-s">This is Bad</h1>
+-            <p class="cp">Screen Width: 400px</p>
+-          <div class="mw-400 overflow-l mb--1-5">
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">This is Bad</h1>
++          <p class="serif lh-cp">Screen Width: 400px</p>
++          <div class="mw-400 of-hid-ns mbm">
+             <img src="http://1funny.com/wp-content/uploads/2012/07/cute-panda-cub.jpg" alt="cute panda">
+           </div>
+         </section>
+         <section>
+-          <h1 class="f4 sansserif uppercase kerning-s">Additional Reading</h1>
+-          <ul class="list-style-none pln">
+-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" title="max-width - CSS | MDN" class="text-decoration-none bb-gray-dotted tawny f4" target="_blank">MDN Max-Width Property</a></li>
++          <h1 class="sansserif f4 f4-l uppercase kerning-s">Additional Reading</h1>
++          <ul class="ul-plain pln">
++            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" title="max-width - CSS | MDN" class="serif tawny text-plain a-uline underline-ns dib of-h rel pbs">MDN Max-Width Property</a></li>
+           </ul>
+         </section>
+       </article>
+-<article class="mw-800">
+-  <h1 class="f3 f3-l uppercase bold sansserif kerning-s">Conclusion</h1>
+-  <p class="cp f4-l">
+-    This is in no way an exhaustive list, but it's a really good start. These promises are clear and easy to implement; and if we consistently deliver on them, we'll make a big impact.
+-  </p>
+-</article>
++      <article class="mw-800 center">
++        <h1 class="sansserif f2 f2-l uppercase bold kerning-s bt-gray-ns ptx-ns">Conclusion</h1>
++        <p class="serif lh-cp">
++          This is in no way an exhaustive list, but it's a good start. These promises
++          are clear and easy to implement. If we consistently deliver on them, we'll
++          make a big impact in making the internet better.
++        </p>
++      </article>
+     </main>
+-
+-     <!--
+-     #TODO : Find good and bad examples of measure
+-
+-<pre>
+- - Is your main copy 16px or larger?
+- - Can you tab through navigation links
+- - Are images responsive (they never bleed off the viewport)
+- - Tap targets are large enough
+-</pre>
+-
+-    What are we trying to get the user to do?
+-    How far away will people be from the content?
+-    What platform / devices?
+-    Can the user find what info they want quickly and easily?
+-    Is this maintainable?
+-    Can someone else change this without losing their $#*!ing mind
+-    Is this under version control?
+-    How much time do we have?
+-    What is the scope?
+-    What order do we want to do things
+-    What are the users / customers expectations
+-    Does this make our users trust us more or less?
+-    Icons vs text + accessibility
+-    Where does the eye lead on the page
+-    Are we speaking to our customer in the way they want to be spoken to?
+-    This font that I chose, is it readable by people who are dyslexic?
+-    List of popular web fonts
+-    - Does your font render properly on a browser?
+-    Does HTML Validate?
+-    What is my user trying to do / trying to accomplish
+-    Do we have content to get started?
+-    Do they know what they are trying to do?
+-    What is my site like on a screen reader
+-    -->
+-
++    <footer class="bt-solid-gray gray-medium tac serif lh-cp">
++      <p>Made by <a href="https://github.com/donnieberg/promises" title="Github repo" class="serif near-black text-plain a-uline underline-ns dib of-h rel pbs mbnegative">Internet Lovers</a></p>
++    </footer>
+   </body>
+ </html>
+diff --git a/sass/_styles.scss b/sass/_styles.scss
+index 1b0edce..bb81c2c 100644
+--- a/sass/_styles.scss
++++ b/sass/_styles.scss
+@@ -1,88 +1,57 @@
+ /* ==========================================================================
+-   Site styles
+-
+-   ========================================================================== */
+-/* Typography */
+-p { font-size: 20px;  }
+-.serif  { font-family: baskerville; }
+-.sansserif { font-family: helvetica, arial, sans-serif; }
+-.tawny { color: $tawny; }
+-.gray-medium { color: $gray-medium; }
+-
+-/* Text Decoration */
+-.uppercase { text-transform: uppercase; }
+-
+-.italic { font-style:italic; } .bold { font-weight: bold; }
+-.kerning-s { letter-spacing: .2em; }
+-.list-style-none { list-style-type: none; }
+-.text-decoration-none { text-decoration: none; }
+-
+-/* Display & Alignment */
+-.tc { text-align: center; }
+-.tl { text-align: left; }
+-.va-m { vertical-align: middle; }
+-.db  { display: block; }
+-.dib { display: inline-block; }
++Site styles
++========================================================================== */
++
++/*==============================
++Content & Element Decoration
++================================*/
++.ul-plain { list-style-type: none; }
++.a-uline:visited { border-bottom: 1px dotted $tawny; }
++
++.b-emph:before, .b-emph:after {
++  content: '';
++  display: block;
++  margin: .5em auto;
++  width: 70%;
++  border-top: 3px solid $gray-light;
++}
++
+ 
+-/* Max-width */
++/*==============================
++Height & Width
++================================*/
+ .mw-full { max-width: 100%; }
++.mw-half { max-width: 50%; }
+ .mw-800 { max-width: 800px; }
+ .mw-400 { max-width: 400px; }
+ 
+-/* Borders */
+-.bt-gray-solid { border-top: 1px solid $gray-light; }
+-.b-black-dotted { border: 3px dotted $near-black; }
+-.bb-gray-dotted { border-bottom: 1px dotted $gray-medium; }
+ 
+-/* Line-heights */
+-.cp { line-height: 1.5; }
+-.lh { line-height: 1; }
+-.lh-2 { line-height: 2; }
+-.lh-title { line-height: 1.3; }
++/*==============================
++Display & Layout
++================================*/
++.center { margin-left: auto; margin-right: auto; }
++.rel { position: relative; }
++.dib { display: inline-block; }
++.of-h { overflow: hidden; }
+ 
+-/* Good/Bad Example Classes */
+-.default-tap-target { width: 44pt; height: 44pt; }
+-.bad-tap-target { width: 30pt; height: 30pt; }
+-.wrap { white-space: nowrap; }
+ 
+-@include break(large) {
+-  .wrap-l { white-space: normal; }
+-  .overflow-l { overflow: hidden;}
+-}
++/*==============================
++Background & Border
++================================*/
++.bg-near-white { background-color: $near-white; }
++.bg-gray-dark { background-color: $gray-dark; }
++.bt-solid-gray { border-top: 2px solid $gray-light; }
+ 
+-@include break(medium) {
+-  .wrap-l { white-space: normal; }
+-  .overflow-l { overflow: hidden;}
+-}
+-
+-.f1 { font-size: 48px;}
+-.f2 { font-size: 36px;}
+-.f3 { font-size: 24px;}
+-.f4 { font-size: 20px;}
+-.f5 { font-size: 18px;}
+-.f6 { font-size: 12px;}
+-
+-@include break(medium) {
+-  .f3-l { font-size: 30px;}
+-}
+-
+-@include break(large) {
+-  .f1-l { font-size: 64px;}
+-  .f2-l { font-size: 48px;}
+-  .f3-l { font-size: 36px;}
+-  .f4-l { font-size: 24px;}
+-  .f5-l { font-size: 12px;}
+-}
+ 
+ /* ==========================================================================
+-   SPACING
++SPACING
+ 
+-   - Mobile & Global
+-   - Not Small (All larger than first breakpoint.)
+-   - Medium
+-   - Large
++- Mobile & Global
++- Not Small (All larger than first breakpoint.)
++- Medium
++- Large
+ 
+-   ========================================================================== */
++========================================================================== */
+ 
+ 
+ /* Padding */
+@@ -150,10 +119,10 @@ p { font-size: 20px;  }
+ .mrl { margin-right: 2rem; }
+ .mrx { margin-right: 4rem; }
+ 
++.mbnegative { margin-bottom: -1rem; }
+ .mbn { margin-bottom: 0; }
+ .mbs { margin-bottom: .5rem; }
+ .mbm { margin-bottom: 1rem; }
+-.mb--1-5 { margin-bottom: 1.5rem; }
+ .mbl { margin-bottom: 2rem; }
+ .mbx { margin-bottom: 4rem; }
+ 
+@@ -351,6 +320,7 @@ p { font-size: 20px;  }
+   .mhm-m { margin: 0 1rem; }
+   .mhl-m { margin: 0 2rem; }
+   .mhx-m { margin: 0 4rem; }
++
+ }
+ 
+ @include break(large) {
+@@ -440,5 +410,46 @@ p { font-size: 20px;  }
+   .mhm-l { margin: 0 1rem; }
+   .mhl-l { margin: 0 2rem; }
+   .mhx-l { margin: 0 4rem; }
++
++}
++
++@include break(not-small) {
++  .bt-gray-ns{ border-top: 2px solid $gray-light; }
++  .ws-norm-ns { white-space: normal; }
++  .of-hid-ns { overflow: hidden;}
++
++  .b-emph-ns:before, .b-emph-ns:after {
++    content: '';
++    display: none;
++  }
++
++  .underline-ns:after {
++    content: '';
++    position: absolute;
++    left: -100%;
++    bottom: 0;
++    width: 100%;
++    height: 1px;
++    background-color: $tawny;
++    transition: all .3s;
++  }
++  .underline-ns:hover:after {
++    left: 0;
++  }
++
++  .underline-ns:after {
++    content: '';
++    position: absolute;
++    left: -100%;
++    bottom: 0;
++    width: 100%;
++    height: 1px;
++    background-color: $tawny;
++    transition: all .3s;
++  }
++  .underline-ns:hover:after {
++    left: 0;
++  }
++
+ }
+ 
+diff --git a/sass/_type.scss b/sass/_type.scss
+index b4090ef..6d5d320 100644
+--- a/sass/_type.scss
++++ b/sass/_type.scss
+@@ -4,16 +4,18 @@
+    - Headings
+    ========================================================================== */
+ 
+-/* Copy
+-   ========================================================================== */
+-
+-p {           font-size: $font-size-4; }
+-.intro {      font-size: $font-size-3; }
++/*====== Font Family ===========*/
++.serif  { font-family: Tiempos, Georgia, Times, serif; }
++.sansserif { font-family: helvetica, arial, sans-serif; }
+ 
+-
+-
+-/* Headings
+-   ========================================================================== */
++/*====== Font Sizes ===========*/
++.f-20 { font-size: 20px; }
++.f1    { font-size: 2rem; }
++.f2    { font-size: 1.5rem; }
++.f3    { font-size: 1.2rem; }
++.f4    { font-size: 1.2rem; }
++.f5    { font-size: 1rem; }
++.f6    { font-size: .85rem; }
+ 
+ h1,.h1 {      font-size: $font-size-1; }
+ h2,.h2 {      font-size: $font-size-2; }
+@@ -23,5 +25,58 @@ h5,.h5 {      font-size: $font-size-5; }
+ h6,.h6 {      font-size: $font-size-6; }
+ 
+ .meta {       font-size: $font-size-6; }
+-
++.intro {      font-size: $font-size-3; }
+ blockquote {  font-size: $font-size-2; }
++
++/*====== Leading ===========*/
++.lh-1 { line-height: 1; }
++.lh-title { line-height: 1.3; }
++.lh-cp { line-height: 1.5; }
++.lh-2 { line-height: 2; }
++
++
++/*====== Text Color ===========*/
++.near-black { color: $near-black; }
++.white { color: $white; }
++.tawny { color: $tawny; }
++.gray-medium { color: $gray-medium; }
++
++
++/*====== Text Decoration ===========*/
++.italic { font-style:italic; }
++.bold { font-weight: bold; }
++.uppercase { text-transform: uppercase; }
++.tac { text-align: center; }
++.kerning-s { letter-spacing: .2em; }
++.text-plain { text-decoration: none; }
++.ws-nowrap { white-space: nowrap; }
++
++
++@include break(not-small) {
++.f1-ns { font-size: 2rem; }
++.f2-ns { font-size: 1.5rem; }
++.f3-ns { font-size: 1.2rem; }
++.f4-ns { font-size: 1.2rem; }
++.f5-ns { font-size: 1rem; }
++.f6-ns { font-size: .85rem; }
++}
++
++@include break(medium) {
++.f1-m { font-size: 2rem; }
++.f2-m { font-size: 1.5rem; }
++.f3-m { font-size: 1.2rem; }
++.f4-m { font-size: 1.2rem; }
++.f5-m { font-size: 1rem; }
++.f6-m { font-size: .85rem; }
++}
++
++@include break(large) {
++.super-mega-l { font-size: 12rem; }
++.mega-l { font-size: 6rem; }
++.f1-l { font-size: 3rem; }
++.f2-l { font-size: 2rem; }
++.f3-l { font-size: 1.5rem; }
++.f4-l { font-size: 1.2rem; }
++.f5-l { font-size: 1rem; }
++.f6-l { font-size: 1rem; }
++}
+diff --git a/sass/_variables.scss b/sass/_variables.scss
+index 294e95a..1ebe941 100644
+--- a/sass/_variables.scss
++++ b/sass/_variables.scss
+@@ -7,12 +7,13 @@
+ 
+ /* Don't use black */
+ 
+-$near-black:  #111;
++$near-black: #111;
+ $white: #fff;
++$near-white: #fffcf5;
+ 
+ /* Gray scale */
+ 
+-$gray-dark:   #222;
++$gray-dark:  #333;
+ $gray-medium: #999;
+ $gray-light:  #eee;
+ 
+diff --git a/sass/i.scss b/sass/i.scss
+index 5ca2530..490ba67 100644
+--- a/sass/i.scss
++++ b/sass/i.scss
+@@ -6,5 +6,6 @@
+ @import "variables";
+ @import "queries";
+ @import "grid";
++@import "type";
+ @import "styles";
+ 
